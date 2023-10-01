@@ -41,4 +41,14 @@ public class User {
     public void setListOfPastes(List<Paste> listOfPastes) {
         this.listOfPastes = listOfPastes;
     }
+
+    public Paste getLastOfPastes(){
+        Paste lastOfPaste = listOfPastes.get(listOfPastes.size()-1);
+        return lastOfPaste;
+    }
+
+    public void addPaste(Paste newPaste, List<Paste> listOfPastes){
+        listOfPastes.add(newPaste);
+        setListOfPastes(listOfPastes);
+    }
 }
